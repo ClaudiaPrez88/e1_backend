@@ -1,9 +1,11 @@
 import express from 'express';
+
 import productsRouter from './routes/products.router.js'; 
 import cartsRouter from './routes/carts.router.js';
 
 const app = express();
 const port = 8080;
+
 
 // Middleware necesario para manejar peticiones POST y PUT
 app.use(express.json()); 
