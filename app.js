@@ -7,15 +7,15 @@ const app = express();
 const port = 8080;
 
 
-// Middleware necesario para manejar peticiones POST y PUT
+// Middleware peticiones POST y PUT
 app.use(express.json()); 
 app.use(express.urlencoded({ extended: true }));
 
-// **Agregamos el router de productos con el prefijo /api/products**
+// Router
 app.use('/api/products', productsRouter);
 app.use('/api/carts', cartsRouter);
 
-// Ruta de raíz simple (ya no necesita leer el archivo)
+// Ruta de raíz 
 app.get('/', (req, res) => {
     res.send("Bienvenido a la API de E-commerce!");
 });
