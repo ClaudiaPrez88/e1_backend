@@ -5,6 +5,7 @@
 import { readFile, writeFile } from 'fs/promises';
 import crypto from 'crypto'; 
 const CARTS_FILE_PATH = 'carts.json';
+const PRODUCTS_FILE_PATH = 'products.json'
 
 
 export class CartManager {
