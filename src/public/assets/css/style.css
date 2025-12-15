@@ -1,0 +1,167 @@
+/* =========================
+   KARU FONT FAMILY
+   ========================= */
+
+/* ExtraLight */
+@font-face {
+  font-family: 'Karu';
+  src: url("../fonts/karu-extralight.woff2") format('woff2');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Karu';
+  src: url("../fonts/karu-extralight-italic.woff2") format('woff2');
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Light */
+@font-face {
+  font-family: 'Karu';
+  src: url("../fonts/Karu Light.woff2") format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Karu';
+  src: url("../fonts/karu-light-italic.woff2") format('woff2');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Regular */
+@font-face {
+  font-family: 'Karu';
+  src: url("../fonts/karu-regular.woff2") format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Regular Italic */
+@font-face {
+  font-family: 'Karu';
+  src: url("../fonts/karu-italic.woff2") format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Medium */
+@font-face {
+  font-family: 'Karu';
+  src: url("../fonts/karu-medium.woff2") format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Karu';
+  src: url("../fonts/karu-medium-italic.woff2") format('woff2');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Bold */
+@font-face {
+  font-family: 'Karu';
+  src: url("../fonts/karu-bold.woff2") format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Karu';
+  src: url("../fonts/karu-bold-italic.woff2") format('woff2');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* ExtraBold */
+@font-face {
+  font-family: 'Karu';
+  src: url("../fonts/karu-extrabold.woff2") format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Karu';
+  src: url("../fonts/karu-extrabold-italic.woff2") format('woff2');
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Black */
+@font-face {
+  font-family: 'Karu';
+  src: url("../fonts/karu-black.woff2") format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Karu';
+  src: url("../fonts/karu-black-italic.woff2") format('woff2');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+body {
+  font-family: 'Karu', sans-serif;
+}
+
+h1 {
+  font-weight: 900;
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: 700;
+}
+
+/* blog */
+
+.bg-boton{
+ background-image: url(../../img/CTA+background+pattern.webp);
+}
+.blog-texto{
+background-color: #C2BA9B;
+padding:24px;
+}
+.blog-texto time, .blog-texto p , .blog-texto span, .blog-texto a{
+color:#5c594c;
+}
+#blog h2 {
+    color: #5c594c;
+    text-transform: uppercase !important;
+    font-weight: 300;
+    text-align: center;
+}
+#blog .img-blog{
+width: 400px;
+height: auto;
+}
+@media (max-width: 1023px) {
+    #blog .img-blog{
+    width: 100%;
+    }
+}
