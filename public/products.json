@@ -1,0 +1,51 @@
+[
+  {
+    "id": "abc1",
+    "title": "Laptop Gamer Pro",
+    "description": "Portátil de alto rendimiento con tarjeta gráfica RTX 4070.",
+    "code": "LG-4070",
+    "price": 1850.5,
+    "status": true,
+    "stock": 15,
+    "category": "Electrónica",
+    "thumbnails": [
+      "/img/lg-pro-frente.jpg",
+      "/img/lg-pro-lateral.jpg"
+    ]
+  },
+  {
+    "id": "def2",
+    "title": "Monitor Curvo Ultrawide",
+    "description": "Pantalla de 34 pulgadas con tasa de refresco de 144Hz.",
+    "code": "MC-34UW",
+    "price": 499.99,
+    "status": true,
+    "stock": 25,
+    "category": "Periféricos",
+    "thumbnails": [
+      "/img/mc-vista.png"
+    ]
+  },
+  {
+    "id": "ghi3",
+    "title": "Teclado Mecánico RGB",
+    "description": "Teclado compacto 60% con switches Cherry MX Red.",
+    "code": "TM-60RGB",
+    "price": 120,
+    "status": true,
+    "stock": 50,
+    "category": "Periféricos",
+    "thumbnails": []
+  },
+  {
+    "id": "05eab3d749c44536300e8fac",
+    "title": "Auriculares Bluetooth",
+    "description": "Cascos inalámbricos con cancelación de ruido.",
+    "code": "AU-BT-NC",
+    "price": 89.99,
+    "status": true,
+    "stock": 40,
+    "category": "Audio",
+    "thumbnails": []
+  }
+]
