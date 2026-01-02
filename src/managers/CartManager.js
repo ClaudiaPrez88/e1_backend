@@ -1,15 +1,20 @@
 
 //Controladores de Datos 
 //Contiene todas las operaciones de CRUD (Crear, Reer, Update, Delete)
-
 import { readFile, writeFile } from 'fs/promises';
 import crypto from 'crypto'; 
-const CARTS_FILE_PATH = 'carts.json';
-const PRODUCTS_FILE_PATH = 'products.json'
+import path from 'path';
+import { fileURLToPath } from 'url';
 
+// reconstruimos __dirname en ES Modules
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// rutas absolutas a los JSON
+const CARTS_FILE_PATH = path.join(__dirname, '../data/carts.json');
+const PRODUCTS_FILE_PATH = path.join(__dirname, '../data/products.json');
 
 export class CartManager {
-
     constructor() {
         this.path = CARTS_FILE_PATH;
     }

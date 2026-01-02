@@ -1,7 +1,9 @@
 import { Router } from 'express';
 import { ProductManager } from '../managers/ProductManager.js';
 
+//instancia de router express que sirve para las rutas del CRUD
 const router = Router();
+
 const productManager = new ProductManager();
 
 // ------------------------------------------------------------------

@@ -1,7 +1,14 @@
 import { readFile, writeFile } from 'fs/promises';
 import crypto from 'crypto';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
-const PRODUCTS_FILE_PATH = 'products.json';
+// reconstruimos __dirname en ES Modules
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// ruta ABSOLUTA al JSON
+const PRODUCTS_FILE_PATH = path.join(__dirname,'../data/products.json');
 
 export class ProductManager {
     constructor() {
