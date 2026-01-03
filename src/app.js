@@ -5,11 +5,7 @@ import handlebars from "express-handlebars";
 import viewsRouter from './routes/views.router.js';
 import __dirname from './utils.js';
 import {Server} from 'socket.io';
-
-import productsRouter from './routes/products.router.js'; 
-import cartsRouter from './routes/carts.router.js';
-import blogRouter from './routes/blog.router.js';
-
+import path from 'path';
 
 const app = express();
 const port = 8080;
@@ -18,24 +14,18 @@ const port = 8080;
 // Middleware peticiones POST y PUT - Estas dos líneas nos permiten caputurar los datos desde el BODY a un POST
 app.use(express.json()); 
 app.use(express.urlencoded({ extended: true }));
+//Crea la ruta para que pueda leer los archivos dentro de public
+app.use(express.static(path.join(__dirname, 'public')));
 //Ruta principal
-app.use('/', express.static(__dirname + '/public'));
 
 //Handlebars
 app.engine('handlebars',handlebars.engine({extname: '.handlebars', defaultLayout: 'main'}));
 app.set('view engine','handlebars');
 app.set('views',__dirname + '/views');
 
-// Declaración de rutas
-app.use('/api/products', productsRouter);
-app.use('/api/carts', cartsRouter);
-app.use('/api/blog', blogRouter);
 
 //Rutas para visitas de Handlebars
 app.use('/viewsrouter', viewsRouter);
-app.use('/prueba',(req,res) => {
-    res.render('prueba');
-})
 
 // Servidor HTTP + Socket.io
 const httpServer = app.listen(port, () => console.log(`Servidor listo en puerto ${port}`));
@@ -43,22 +33,19 @@ const socketServer = new Server(httpServer);
 
 // Socket.io
 const mensajes = [];
-socketServer.on('connection', socket => {
-    const generarId = () => mensajes.length + 1;
 
+socketServer.on('connection', socket => {
+    // socket.emit("evento_socket_individual", "Mensaje individual");
+    // socket.broadcast.emit("evento_para_todos_menos_socket_actual", "Mensaje para todos menos el actual");
+    // socketServer.emit("evento_para_todos", "Mensaje para Todos!"); 
+
+    const generarId = () => mensajes.length + 1;
     socket.on('mensaje', data => {
         const nuevoMensaje = { socketId: generarId(), mensaje: data };
         mensajes.push(nuevoMensaje);
         socketServer.emit('mensajes', mensajes); // envía a todos los clientes
-    });
+        });
 });
-
-
-// Configuración HBS
-app.set('view engine', 'handlebars');
-app.set('views', __dirname + '/views');
-
-
 
 
 // Ruta de raíz 
